@@ -1,7 +1,6 @@
 # Readme del curso nivelador del Master en Full Stack Web Development de Three Points
 
 ## Esto es una prueba
-Esto es una prueba.
 
 Este repositorio es una breve guía para que los alumnos del master tengan una base de nodejs y docker de acuerdo al temario impartido en el curso nivelador del Master en Full Stack Web Development de Three Points.
 
