@@ -4,6 +4,8 @@
 
 Este repositorio es una breve guía para que los alumnos del master tengan una base de nodejs y docker de acuerdo al temario impartido en el curso nivelador del Master en Full Stack Web Development de Three Points.
 
+Este cambio en el Readme debe ser reflejado en el repositorio de github como una muestra de que seguimos haciendo commit en esta rama.
+
 ## License
 MIT License
 Copyright (c) 2021 
@@ -24,4 +26,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE_.
+SOFTWARE.
