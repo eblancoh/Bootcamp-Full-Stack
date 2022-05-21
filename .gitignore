@@ -1,5 +1,11 @@
+.gitignore
+
+__pycache__
+.vscode/launch.json
 node-npm_webapp/*
 docker-node-npm_webapp/*
-node-npm_intro/node_modules/*
-docker_intro/node_modules/*
-*.ini
+node_modules/
+my_data/
+remove_timestamp.py
+docker_intro/server_solution.js
+codetest_mvp/

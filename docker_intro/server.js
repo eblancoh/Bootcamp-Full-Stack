@@ -1,6 +1,5 @@
 const express = require('express');
 // Constants
-// const hostname = '127.0.0.1';
 const hostname = '0.0.0.0';
 const port = 8080;
 
@@ -22,6 +21,33 @@ app.get('/secret', function (req, res, next) {
     res.send('Never be cruel, never be cowardly. And never eat pears!');
     console.log('This is a console.log message.');
 });
+
+/*
+Your implementation here 
+*/
+
+// // Connect to mongodb server
+// const MongoClient = require('mongodb').MongoClient;
+// /* Your url connection to mongodb container */
+// const url = ...;
+
+// GET method route
+// Retrieve all documents in collection
+// ...
+
+// GET method route
+// Query by hostname
+// ...
+
+/* PUT method. Modifying the message based on host. 
+If not found, create a new document in the database. (201 Created)
+If found, message, date and offset is modified (200 OK) */
+// ...
+
+/* DELETE method. Modifying the message based on hostname. 
+If not found, do nothing. (204 No Content)
+If found, document deleted (200 OK) */
+// ...
 
 app.listen(port, hostname);
 console.log(`Running on http://${hostname}:${port}`);

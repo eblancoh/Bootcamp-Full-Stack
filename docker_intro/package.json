@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "fs": "*"
+    "fs": "*",
+    "ip": "^1.1.5",
+    "mongodb": "^4.5.0"
   }
 }

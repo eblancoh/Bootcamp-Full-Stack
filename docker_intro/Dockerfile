@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -18,4 +18,5 @@ COPY . .
 # Bind your app to port 8080
 EXPOSE 8080
 
-CMD [ "node", "server.js" ]
+# CMD [ "node", "server.js" ]
+CMD [ "node", "server_solution.js" ]
