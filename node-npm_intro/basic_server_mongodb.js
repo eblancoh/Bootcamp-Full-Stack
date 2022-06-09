@@ -1,11 +1,12 @@
 const http = require('https');
 const ip_host = '127.0.0.1';
 const port = 8080;
-var cowsay = require('cowsay');
+// var cowsay = require('cowsay');
 const fs = require('fs');
 var path = require('path');
-const yaml = require('js-yaml');
+// const yaml = require('js-yaml');
 const os = require("os");
+const mongo = require('mongodb')
 
 var scriptName = path.basename(__filename);
 var message = "Hello World! with Cowsay";
@@ -32,7 +33,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(() => {
                         /* Create a document in mongodb and insert it into the database */
-                        var MongoClient = require('mongodb').MongoClient;
+                        var MongoClient = mongo.MongoClient;
                         var url = `mongodb://localhost:27017/`;
                         MongoClient.connect(url, function(err, db) {
                           if (err) throw err;

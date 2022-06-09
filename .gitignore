@@ -6,6 +6,6 @@ node-npm_webapp/*
 docker-node-npm_webapp/*
 node_modules/
 my_data/
-remove_timestamp.py
+*.py
 docker_intro/server_solution.js
 codetest_mvp/
