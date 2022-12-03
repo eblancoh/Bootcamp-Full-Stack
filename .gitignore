@@ -2,8 +2,8 @@
 
 __pycache__
 .vscode/launch.json
-node-npm_webapp/*
-docker-node-npm_webapp/*
+node-npm_webapp/
+docker-node-npm_webapp/
 node_modules/
 my_data/
 remove_timestamp.py
