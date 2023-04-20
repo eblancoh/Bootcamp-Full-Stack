@@ -36,15 +36,15 @@ Your implementation here
 // ...
 
 // GET method route
-// Query by hostname
+// Query by a certain field(s)
 // ...
 
-/* PUT method. Modifying the message based on host. 
+/* PUT method. Modifying the message based on certain field(s). 
 If not found, create a new document in the database. (201 Created)
 If found, message, date and offset is modified (200 OK) */
 // ...
 
-/* DELETE method. Modifying the message based on hostname. 
+/* DELETE method. Modifying the message based on certain field(s).
 If not found, do nothing. (204 No Content)
 If found, document deleted (200 OK) */
 // ...
