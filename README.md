@@ -1,31 +1,34 @@
-# Readme del curso nivelador del Master en Full Stack Web Development de Three Points
-
-## Esto es una prueba
+# Bootcamp del Master en Full Stack Web Development de ThreePoints
 
 Este repositorio es una breve guía para que los alumnos del master tengan una base de nodejs y docker de acuerdo al temario impartido en el Bootcamp del Master en Full Stack Web Development de Three Points.
 
-Este cambio en el Readme debe ser reflejado en el repositorio de github como una muestra de que seguimos haciendo commit en esta rama.
+## Descripción de contenidos
 
-Este cambio en el Readme debe ser reflejado en el repositorio de github como una muestra de que seguimos haciendo commit en esta rama.
+
+* ide_intro: código de muestra en la explicación del IDE.
+* node-npm_intro: ejemplos sencillos en node para levantar una app.
+* docker_intro: **código semilla para la actividad.**
+* db_sample: colección de muestra en formato json si el alumno desea usarla para la actividad.
+
+## Dockerización Base de Datos MongoDB
+
+Dado que en la actividad se pide que la app, desplegada en un Docker se comunique con la base de datos, también desplegada en un Docker container,
+se pueden seguir los siguientes pasos para que la app se comunique con el container de mongo.
+
+```bash
+docker network create <my-network>
+docker run --name <container-name> --hostname <your-hostname> -d -p 27017:27017 --network <my-network> mongo
+```
+
+Cada alumno puede incluir en la base de datos la información que desee. 
+De todas formas, en este repo se deja una colección de muestra en la carpeta `db_sample/` por si alguien desea usarla por simplicidad.
+
+Se pueden seguir los siguientes pasos para, una vez esté corriendo mongo en le container correspondiente, se incorporen los documentos a una bbdd mockeada.
+```bash 
+docker cp <your-path-to-db_sample/users.json> <container-name>:/users.json
+docker exec -it <container-name> mongoimport --db <your-database-name> --collection <your-collection-name> --file /users.json --jsonArray
+```
 
 ## License
 MIT License
-Copyright (c) 2022 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Copyright (c) 2023
