@@ -9,3 +9,5 @@ my_data/
 remove_timestamp.py
 docker_intro/server_solution.js
 codetest_mvp/
+
+*.ini
