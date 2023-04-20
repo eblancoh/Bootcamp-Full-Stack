@@ -172,6 +172,15 @@ If not found, do nothing. (204 No Content)
 If found, document deleted (200 OK) */
 // I'm using the email
 app.delete('/api/delete', function(req, res) {
+    /* 
+    we're using the connect() method to establish a connection to the MongoDB server, 
+    and then we're using promises to handle the result of the operation. 
+    We chain the then() method after the deleteOne() method to handle the result of the delete operation. 
+    If the document is found and deleted, we send a 200 OK response with the message "Document deleted". 
+    If the document is not found, we send a 204 No Content response. If an error occurs, 
+    we send a 500 Internal Server Error response with a message. Finally, 
+    we close the connection to the MongoDB server using the close() method.
+    */
     const email = req.body.email;
   
     MongoClient.connect(url)
