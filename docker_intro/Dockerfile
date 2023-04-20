@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -19,4 +19,5 @@ COPY . .
 EXPOSE 8080
 
 # CMD [ "node", "server.js" ]
-CMD [ "node", "server_solution.js" ]
+# CMD [ "node", "server_solution.js" ]
+CMD [ "node", "service_2.js" ]
