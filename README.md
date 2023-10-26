@@ -1,4 +1,4 @@
-# Bootcamp del Master en Full Stack Web Development de ThreePoints
+# Bootcamp del Master en Full Stack Web Development
 
 Este repositorio es una breve guía para que los alumnos del master tengan una base de nodejs y docker de acuerdo al temario impartido en el Bootcamp del Master en Full Stack Web Development de Three Points.
 
