@@ -29,7 +29,7 @@ docker cp <your-path-to-db_sample/users.json> <container-name>:/users.json
 docker exec -it <container-name> mongoimport --db <your-database-name> --collection <your-collection-name> --file /users.json --jsonArray
 ```
 
-Este cambio en el Readme debe ser reflejado en el repositorio de github como una muestra de que seguimos haciendo commit en esta rama.
+Este cambio en el README debe ser reflejado en el repositorio de github como una muestra de que seguimos haciendo commit en esta rama.
 
 ## License
 MIT License
