@@ -26,7 +26,6 @@ app.get('/secret', function (req, res, next) {
 Your implementation here 
 */
 
-
 // // Connect to mongodb server
 // const MongoClient = require('mongodb').MongoClient;
 // /* Your url connection to mongodb container */
