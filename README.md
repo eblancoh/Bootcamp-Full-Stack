@@ -35,6 +35,10 @@ Se puede levantar la imagen de mongodb con la colección de usuarios y correrá 
 cd docker_compose_intro/
 docker-compose up
 ```
+```bash
+curl --location 'http://localhost:8080/api/get?gender=Male' \
+--data ''
+```
 
 
 ## License
