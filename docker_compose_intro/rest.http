@@ -6,7 +6,7 @@ GET http://localhost:8080
 GET http://localhost:8080/api/get/all
 
 ### GET by gender
-GET http://localhost:8080/api/get?gender=Male
+GET http://localhost:8080/api/get?gender=Female
 
 ### PUT a new document
 PUT http://localhost:8080/api/put

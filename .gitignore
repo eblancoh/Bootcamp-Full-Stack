@@ -1,12 +1,7 @@
 .gitignore
 
-__pycache__
-.vscode/launch.json
-node-npm_webapp/
-docker-node-npm_webapp/
+.vscode
 node_modules/
-my_data/
-remove_timestamp.py
-docker_intro/server_solution.js
+server_solution.js
 
 .idea

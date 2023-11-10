@@ -29,6 +29,13 @@ docker cp <your-path-to-db_sample/users.json> <container-name>:/users.json
 docker exec -it <container-name> mongoimport --db <your-database-name> --collection <your-collection-name> --file /users.json --jsonArray
 ```
 
+Se puede levantar la imagen de mongodb con la colección de usuarios y correrá la API en node con el siguiente comando:
+
+```bash
+cd docker_compose_intro/
+docker-compose up
+```
+
 
 ## License
 MIT License
