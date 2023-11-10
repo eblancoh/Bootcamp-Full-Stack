@@ -1,0 +1,43 @@
+# This action executes docker-compose up in docker_compose_intro folder
+# and checks that curl --location 'http://localhost:8080/api/get?gender=Male' \
+# --data '' returns a 200 OK response
+name: Docker Compose and API Test
+
+on:
+    pull_request:
+        types: [opened, synchronize, edited, ready_for_review]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Compose
+      run: |
+        sudo rm /usr/local/bin/docker-compose
+        sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
+
+    - name: Build and run Docker Compose
+      run: |
+        cd docker_compose_intro
+        docker-compose up -d
+
+    - name: Wait for services to start
+      run: sleep 15
+
+    - name: Test API
+      run: |
+        response_code=$(curl --write-out "%{http_code}" --location --request GET 'http://localhost:8080/api/get?gender=Male' --data '' --output /dev/null)
+        if [ "$response_code" -ne 200 ]; then
+          echo "API test failed with response code $response_code"
+          exit 1
+        fi
+
+    - name: Tear down Docker Compose
+      run: |
+        cd docker_compose_intro
+        docker-compose down
