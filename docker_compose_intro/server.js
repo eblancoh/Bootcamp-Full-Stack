@@ -41,7 +41,8 @@ Your implementation here
 
 /* PUT method. Modifying the message based on certain field(s). 
 If not found, create a new document in the database. (201 Created)
-If found, message, date and offset is modified (200 OK) */
+If found, message, date and offset is modified (200 OK) 
+If only one parameter is provided in the body and no documents are found, do nothing (204 OK)*/
 // ...
 
 /* DELETE method. Modifying the message based on certain field(s).
