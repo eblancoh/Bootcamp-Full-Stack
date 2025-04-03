@@ -8,7 +8,7 @@ const app = express();
 
 // GET method route
 app.get('/', function (req, res) {
-    res.send('GET request to the homepage');
+    res.send('GET request to the localhost.');
 });
   
 // POST method route
@@ -51,4 +51,3 @@ If found, document deleted (200 OK) */
 
 app.listen(port, hostname);
 console.log(`Running on http://${hostname}:${port}`);
-
