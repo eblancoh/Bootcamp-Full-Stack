@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post('/cowsay', function(request, response){
     response.send(cowsay.say({
-                                text: request.query.quote,
+                                text: request.body.quote || "Moo!",
                                 e: "oO",
                                 T: "U "
                             })
